@@ -1,11 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose from '../config/database';
 
 const Orders = new mongoose.Schema(
   {
     id_order: { type: String, required: true, unique: true },
     customer: {
-      company: { type: String, required: true },
-      contact_person: { type: String, required: true },
+      name: { type: String, required: true },
+      contact_person: { type: String, required: false },
     },
     item: {
       code: { type: String, required: true, unique: true },
